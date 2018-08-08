@@ -151,11 +151,10 @@ foreach($masyvas as $index => $stalcius){
     }
 }
 
-echo
 
 // print_r($masyvas);
 echo'<br>'; 
-echo ' pirmas elementas su reiksme didesne nei 10 yra '.$stalcius.' jo masyvo indeksas ['.$index.']';
+// echo ' pirmas elementas su reiksme didesne nei 10 yra '.$stalcius.' jo masyvo indeksas ['.$index.']';
 echo'<br>';
 echo'<br>';
 echo'Naudodami funkciją unset() iš masyvo ištrinkite visus elementus turinčius porinį indeksą;';
