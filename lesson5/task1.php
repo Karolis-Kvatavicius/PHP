@@ -40,23 +40,24 @@ if(!is_numeric($_POST['x'])){ //pasitikrinimas del klaidos, jei yra ivesta neska
 <br>
 <p>Iveskite reiksmes: </p>
 <br>
+<br>
 X:
 <input type="text" name="x" value="">
+<br>
 <br>
 Y :
 <input type="text" name="y" value="">
 <br>
-
 <br>
 <input type="submit" value="Susumuoti">
 </form>
 </div>
 <br>
-
-<p>Jūsų x reiksme: <b><?php echo $x ?> </b></p>
-  <p>Jūsų y reiksme : <b> <?php echo $y ?> </b></p>
-
-
+<br>
+<p>Jūsų x reiksme: <br><?php echo $x ?> </br></p>
+  <p>Jūsų y reiksme : <br> <?php echo $y ?> </br></p>
+  <br>
+<br>
 <?php
 
 if($klaida){
@@ -64,9 +65,9 @@ if($klaida){
     <br>
     <br>Neteisinga ivestis';
 }else{
- 
+  
     $sum = $x + $y;
-   echo 'REZULTATAS  <br>'.$x.' + '.$y.' =  '.$sum;
+   echo '<br>REZULTATAS  <br>'.$x.' + '.$y.' =  '.$sum;
 }
 ?>
 </body>

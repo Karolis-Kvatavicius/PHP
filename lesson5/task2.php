@@ -10,7 +10,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
 </head>
-<body  class = "block">
+<body>
+
 <h1>Apklausa</h1>
 <div class = "container">
 <p>Koks tai gyvunas? </p>
@@ -40,6 +41,7 @@ elseif(isset($_POST['radio'])){
 
 ?>
 </div>
+
 
 </body>
 </html>

@@ -1,15 +1,16 @@
+.forma{
+  display: inline - block;
+  border: 2px solid #ccc;
 
-.block {
+background-color:rgb(243, 240, 240);
+}
+
+form {
   display: inline-block;
 }
 
 
 
-.forma{
-      border: 2px solid #ccc;
-    max-width: 20%;
-    background-color:rgb(243, 240, 240);
-}
 
 
 .error {color: rgb(255, 79, 9);}

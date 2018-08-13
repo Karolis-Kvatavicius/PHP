@@ -57,31 +57,34 @@ Y :
 <br>
 <input type="submit" value="Rezultatas">
 </form>
-</div>
-<br>
 
-<p>Jūsų x reiksme: <b><?php echo $x ?> </b></p>
-  <p>Jūsų y reiksme : <b> <?php echo $y ?> </b></p>
- 
+<br>
+<br>
+<p>Jūsų x reiksme: <br><?php echo $x ?> </br></p>
+<br>
+  <br>
+  <p>Jūsų y reiksme : <br> <?php echo $y ?> </br></p>
+  <br>
+  <br>
  <?php
   if(isset($_POST['task4'])){
     $task4 = $_POST['task4'];
     switch ( $task4 ) {
         case '1':
             $sum = $x + $y;
-            echo '<br> '.$x.' + '.$y.' = '.$sum;
+            echo '<br> Rezultatas :  <br> '.$x.' + '.$y.' = '.$sum;
             break;
         case '2':
             $sum = $x - $y;
-            echo '<br> '.$x.' - '.$y.' = '.$sum;
+            echo '<br> Rezultatas :  <br> '.$x.' - '.$y.' = '.$sum;
             break;
         case '3':
             $sum = $x / $y;
-            echo '<br> '.$x.' / '.$y.' = '.$sum;
+            echo '<br> Rezultatas :  <br> '.$x.' / '.$y.' = '.$sum;
             break;
         case '4':
             $sum = $x * $y;
-            echo '<br> '.$x.' * '.$y.' = '.$sum;
+            echo '<br> Rezultatas :  <br> '.$x.' * '.$y.' = '.$sum;
                 break;
         default:
          echo 'reiksmes nebuvo ivestos';
@@ -96,6 +99,8 @@ if($klaida){
     <br>
     <br>Neteisinga ivestis';
 }
+
 ?>
+</div>
 </body>
 </html>

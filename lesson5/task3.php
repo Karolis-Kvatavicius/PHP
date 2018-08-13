@@ -10,81 +10,98 @@
 </head>
 <body>
 <h1>Apklausa</h1>
+<div>
+            <?php
+            $visiKlausimai = 3;
+            $atsakymas = '';
+            if (isset($_GET['spejam'])) {
+                $teisingiAtsakymai = $_GET['task1'] + $_GET['task2'] + $_GET['task3'];
+                $procentas = ($teisingiAtsakymai/$visiKlausimai) * 100;
+                echo '<p id="result">Jūs atsakėte į ' .$teisingiAtsakymai. ' iš 3 klausimų teisingai. Surinkote ' .$procentas. ' %</p>';
+            }
+   
+            ?>
+            </div>
+<div class="form">
 <img src="img/briedis.jpg" alt="briedis.jpg" height="300" width="300">
 <p>Koks tai gyvunas? </p>
-<form action="" method="post">
-<select name="task3">
-<option value="1">Elnias</option>
-<option value="2">Vista</option>
-<option value="3">Suo</option>
-<option value="4">Kate</option>
+<form action="task3.php" method="post">
+<select name="task1">
+<option name="answer" value=1>Elnias</option>
+<option name="answer"value="0">Vista</option>
+<option name="answer"value="0">Suo</option>
+<option name="answer"value="0">Kate</option>
 </select>
-<br>
-<br>
-<!-- <input type="submit" name="submit"  /> -->
-</form>
-<br>
-<br>
+<?php
+                    if (isset($_GET['task1'])) {
+                        $atsakymas = $_GET['task1'];
+                        if ($atsakymas == 1) {
+                            echo '<span style="color: rgb(9, 255, 21)"<br>Jūsų atsakymas teisingas<br></span>'; 
+                        }
+                        else{
+                            echo '<span style="color: rgb(255, 79, 9)"<br>Jūsų atsakymas neteisingas <br></span><br>';
+                        }
+                    }
+                    ?>
 
 <br>
 <br>
+<div>
 <img src="img/CHICKEN.jpg" alt="CHICKEN.jpg" height="250" width="250">
 <p>Koks tai gyvunas? </p>
-<form action="" method="post">
-<select name="task3">
-<option value="1">Elnias</option>
-<option value="2">Vista</option>
-<option value="3">Suo</option>
-<option value="4">Kate</option>
-</select>
-<br>
-<!-- <input type="submit" name="submit" /> -->
-</form>
+<select name="task2">
+<option name="answer" value="0">Elnias</option>
+<option name="answer" value=1>Vista</option>
+<option name="answer" value="0">Suo</option>
+<option name="answer" value="0">Kate</option>
 
+</select>
+<?php
+                    if (isset($_GET['task2'])) {
+                        $atsakymas = $_GET['task2'];
+                        if ($atsakymas == 1) {
+                            echo '<span style="color: rgb(9, 255, 21)"<br>Jūsų atsakymas teisingas<br></span>'; 
+                        }
+                        else{
+                            echo '<span style="color: rgb(255, 79, 9)"<br>Jūsų atsakymas neteisingas <br></span><br>';
+                        }
+                    }
+                    ?>
+</div>
 <br>
 <br>
+<br>
+<div>
 <img src="img/Dogs.jpg" alt="Dogs.jpg" height="300" width="300">
 <p>Koks tai gyvunas? </p>
-<form action="" method="post">
 <select name="task3">
-<option value="1">Elnias</option>
-<option value="2">Vista</option>
-<option value="3">Suo</option>
-<option value="4">Kate</option>
-</select>
+<option name="answer" value="0">Elnias</option>
+<option name="answer" value="0">Vista</option>
+<option name="answer" value=1>Suo</option>
+<option name="answer" value="0">Kate</option>
+</select><?php
+                    if (isset($_GET['task3'])) {
+                        $atsakymas = $_GET['task3'];
+                        if ($atsakymas == 1) {
+                            echo '<span style="color: rgb(9, 255, 21)"<br>Jūsų atsakymas teisingas<br></span>'; 
+                        }
+                        else{
+                            echo '<span style="color: rgb(255, 79, 9)"<br>Jūsų atsakymas neteisingas <br></span><br>';
+                        }
+                    }
+                    ?>
+</div>
 <br>
 <br>
-<!-- <input type="submit" name="submit" /> -->
-<?php
-if (isset($_POST['submit'])) {
-    if(isset($_POST['Elnias']))
-    {
-    echo '<span style="color: rgb(9, 255, 21)"<br>Jūsų atsakymas teisingas, tai yra : <br>'.$_POST['Elnias'].'<br></span>'; 
-    }
-    else{
-        echo '<span style="color: rgb(255, 79, 9)"<br>Jūsų atsakymas neteisingas <br></span><br>';
-    }
-    if(isset($_POST['Višta']))
-    {
-    echo '<span style="color: rgb(9, 255, 21)"<br>Jūsų atsakymas teisingas, tai yra : <br>'.$_POST['Višta'].'<br></span><br>'; 
-    }
-    else{
-        echo '<span style="color: rgb(255, 79, 9)"<br>Jūsų atsakymas neteisingas><br></span><br>';
-    }
-    if(isset($_POST['Šuo']))
-    {
-        echo '<span style="color: rgb(9, 255, 21) "<br>Jūsų atsakymas teisingas, tai yra : <br>'.$_POST['Šuo'].'<br></span>';
-    }
-    else{
-    echo '<span style="color: rgb(255, 79, 9) "<br>Jūsų atsakymas neteisingas <br></span><br>';
-    }
 
-}
+<?php
 
 
 ?>
 
- <input type="submit" name="submit" value=" Spėti " />
+  <input type="submit" name="spejam" <?php echo isset($_GET[ 'spejam']) ? "disabled" : ""?> value="Spėti">
+ <!-- <input type="submit" name="spejam" value=" Spėti " />  -->
+ </div>
 </form>
 
 
