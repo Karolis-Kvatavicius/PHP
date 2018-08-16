@@ -1,8 +1,7 @@
 <?php
 session_start();
-
-if(isset(!$_SESSION['sesija']) || $_SESSION['sesija'] === true){
-    header('Location:http://localhost/phppamokos/PHP/tarpinisDarbas/login.php');
+if(isset($_SESSION['sesija']) || $_SESSION['sesija'] == true){
+    // header('Location:http://localhost/phppamokos/PHP/tarpinisDarbas/login.php');
     exit;
 }
 ?>

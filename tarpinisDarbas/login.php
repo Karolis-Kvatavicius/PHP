@@ -20,7 +20,7 @@ if(isset($_SESSION['sesija']) && $_SESSION['sesija'] == true){
 <?php
 
 $email = 'donata@donata.lt';
-$password = 'ooo';
+$password = '1';
 
 
 if(isset($_POST['enter_password'])){
@@ -37,7 +37,7 @@ if($_POST['password'] == $password && $_POST['user_name']==$email) {
 
 ?>
 
-<h1>LOGIN</h1>
+<!-- <h1>LOGIN</h1> -->
 <form action = "login.php" method = "post" >
     <div class = "forma2">
 <br> <h4>User name: </h4><br>

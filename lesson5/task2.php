@@ -31,7 +31,7 @@ if(isset($_POST['Elnias']))
 echo '<span style="color: rgb(9, 255, 21) "><br>Jūsų atsakymas teisingas, tai yra : <br>'.$_POST['Elnias'].'</span>'; 
 }
 elseif(isset($_POST['radio'])){
-    echo '<span style="color: rgb(255, 79, 9) "><br>Jūsų atsakymas neteisingas, tai nėra : <br>'.$_POST['radio'].'</span>';
+    echo '<span style="color: red "><br>Jūsų atsakymas neteisingas, tai nėra : <br>'.$_POST['radio'].'</span>';
 }else{
     echo 'Jūs nieko nepasirinkote ';
 }

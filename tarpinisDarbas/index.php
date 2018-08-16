@@ -53,7 +53,7 @@ if(isset($_POST['file-name'])) {
 
 
  if($file) {
-    $current = file_get_contents('failai/'.$file);
+    @$current = file_get_contents('failai/'.$file);
  }
 
 

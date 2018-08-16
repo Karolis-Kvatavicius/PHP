@@ -74,5 +74,5 @@ echo '<br>';
 echo "John Smith\n";
 echo '<h1>Antra Tema Darbas su failais</h1>';
 echo '<br>';
-$homepage = file_get_contents('http://www.google.com/');
+// $homepage = file_get_contents('http://www.google.com/');
 echo $homepage;

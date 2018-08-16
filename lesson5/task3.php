@@ -23,14 +23,16 @@
             ?>
             </div>
 <div class="form">
+<form  action="task3.php" method="GET">
 <img src="img/briedis.jpg" alt="briedis.jpg" height="300" width="300">
 <p>Koks tai gyvunas? </p>
 <form action="task3.php" method="post">
 <select name="task1">
-<option name="answer" value=1>Elnias</option>
-<option name="answer"value="0">Vista</option>
-<option name="answer"value="0">Suo</option>
-<option name="answer"value="0">Kate</option>
+<option name="task1" value=0></option>
+<option name="task1" value=1>Elnias</option>
+<option name="task1"value="0">Vista</option>
+<option name="task1"value="0">Suo</option>
+<option name="task1"value="0">Kate</option>
 </select>
 <?php
                     if (isset($_GET['task1'])) {
@@ -50,10 +52,11 @@
 <img src="img/CHICKEN.jpg" alt="CHICKEN.jpg" height="250" width="250">
 <p>Koks tai gyvunas? </p>
 <select name="task2">
-<option name="answer" value="0">Elnias</option>
-<option name="answer" value=1>Vista</option>
-<option name="answer" value="0">Suo</option>
-<option name="answer" value="0">Kate</option>
+<option name="task2" value=0></option>
+<option name="task2" value="0">Elnias</option>
+<option name="task2" value=1>Vista</option>
+<option name="task2" value="0">Suo</option>
+<option name="task2" value="0">Kate</option>
 
 </select>
 <?php
@@ -75,10 +78,11 @@
 <img src="img/Dogs.jpg" alt="Dogs.jpg" height="300" width="300">
 <p>Koks tai gyvunas? </p>
 <select name="task3">
-<option name="answer" value="0">Elnias</option>
-<option name="answer" value="0">Vista</option>
-<option name="answer" value=1>Suo</option>
-<option name="answer" value="0">Kate</option>
+<option name="task1" value=0></option>
+<option name="task3" value="0">Elnias</option>
+<option name="task3" value="0">Vista</option>
+<option name="task3" value=1>Suo</option>
+<option name="task3" value="0">Kate</option>
 </select><?php
                     if (isset($_GET['task3'])) {
                         $atsakymas = $_GET['task3'];
