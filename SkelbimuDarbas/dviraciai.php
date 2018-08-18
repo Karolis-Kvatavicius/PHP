@@ -29,7 +29,9 @@ if ($handle = opendir('failai/dviraciai/')) {
          echo '<h3>'.basename('failai/dviraciai/'.$entry,'.txt').'</h3>';
          $skelbimoTurinys = explode('this_is_the_end_of_content', file_get_contents('failai/dviraciai/'.$entry), 2); 
          echo '<p>'.$skelbimoTurinys[0].'<p>';
-         echo '<img width="500px" height="300px" src="data:image/jpg;base64,' . $skelbimoTurinys[1] . '" />';
+         if ($skelbimoTurinys[1] != "\n") {
+            echo '<img alt="Invalid file format" onerror="this.src=\'images.png\'" width="500px" height="300px" src="data:image/jpg;base64,' . $skelbimoTurinys[1] . '" />';
+         }
          echo '</div>';
     }
 }

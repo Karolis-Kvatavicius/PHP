@@ -34,7 +34,6 @@ if(isset($_POST['ikelti']) && $_POST['antraste'] != '' && $_POST['turinys'] != '
     fopen($naujasSkelbimas, "w");
     file_put_contents($naujasSkelbimas, $_POST['turinys']. "this_is_the_end_of_content\n" .base64_encode(file_get_contents($_FILES['nuotrauka']['tmp_name'])), FILE_APPEND);
 }
-
 ?>
 </form>
 

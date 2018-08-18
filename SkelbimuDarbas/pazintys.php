@@ -27,11 +27,11 @@ if ($handle = opendir('failai/pazintys/')) {
     if($entry != '.' && $entry != '..'){
         echo '<div class="skelbimas">';
         echo '<h3>'.basename('failai/pazintys/'.$entry,'.txt').'</h3>';
-        $skelbimoTurinys = explode('this_is_the_end_of_content', file_get_contents('failai/pazintys/'.$entry), 2); 
+        $skelbimoTurinys = explode('this_is_the_end_of_content', file_get_contents('failai/pazintys/'.$entry), 2);
         echo '<p>'.$skelbimoTurinys[0].'<p>';
-        // if(array_key_exists('1', $skelbimoTurinys)) {
-        echo '<img width="500px" height="300px" src="data:image/jpg;base64,' . $skelbimoTurinys[1] . '" />';
-        // }
+        if ($skelbimoTurinys[1] != "\n") {
+            echo '<img alt="Invalid file format" onerror="this.src=\'images.png\'" width="500px" height="300px" src="data:image/jpg;base64,' . $skelbimoTurinys[1] . '" />';
+        }
         echo '</div>';
     }
 }
