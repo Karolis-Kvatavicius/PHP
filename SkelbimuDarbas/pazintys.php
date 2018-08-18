@@ -12,11 +12,11 @@
 <h1>Kategorijos</h1>
 <br>
 <br>
-<a href="http://localhost/phppamokos/PHP/SkelbimuDarbas/index.php" >Pagrindinis</a>
+<a href="http://localhost/skelbimu-saitas/SkelbimuDarbas/index.php" >Pagrindinis</a>
 <br>
-<a href="http://localhost/phppamokos/PHP/SkelbimuDarbas/automobiliai.php" >Automobiliai</a>
+<a href="http://localhost/skelbimu-saitas/SkelbimuDarbas/automobiliai.php" >Automobiliai</a>
 <br>
-<a href="http://localhost/phppamokos/PHP/SkelbimuDarbas/dviraciai.php" >Dviraciai</a>
+<a href="http://localhost/skelbimu-saitas/SkelbimuDarbas/dviraciai.php" >Dviraciai</a>
 </div>
 <div class="pagrn">
 <div class="skelbimu">
@@ -26,11 +26,13 @@ if ($handle = opendir('failai/pazintys/')) {
     while (false !== ($entry = readdir($handle))) {
     if($entry != '.' && $entry != '..'){
         echo '<div class="skelbimas">';
-  echo '<h3>'.basename('failai/pazintys/'.$entry,'.txt').'</h3>';
-
-
-   echo '<p>'.@file_get_contents('failai/pazintys/'.$entry).'<p>'; //klaidom pasalint @ 
-    echo '</div>';
+        echo '<h3>'.basename('failai/pazintys/'.$entry,'.txt').'</h3>';
+        $skelbimoTurinys = explode('this_is_the_end_of_content', file_get_contents('failai/pazintys/'.$entry), 2); 
+        echo '<p>'.$skelbimoTurinys[0].'<p>';
+        // if(array_key_exists('1', $skelbimoTurinys)) {
+        echo '<img width="500px" height="300px" src="data:image/jpg;base64,' . $skelbimoTurinys[1] . '" />';
+        // }
+        echo '</div>';
     }
 }
     closedir($handle);

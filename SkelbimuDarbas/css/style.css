@@ -28,3 +28,13 @@ h3,p{
 resize: none;
 }
 
+form p {
+   text-align: left;
+   margin: 0;
+   font-weight: bold;
+   color: red;
+}
+
+form #upload_success {
+    color: green;
+}
